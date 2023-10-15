@@ -44,10 +44,11 @@ public class CatalogoLivros {
     }
 
     public Livro pesquisarPorTitulo(String titulo) {
-        for (Livro livro : livroList) {
-            if (livro.getTitulo().equalsIgnoreCase(titulo)) {
-                return livro;
-            }
+        if (!this.livroList.isEmpty())
+            for (Livro livro : livroList) {
+                if (livro.getTitulo().equalsIgnoreCase(titulo)) {
+                    return livro;
+                }
         }
         return null;
     }
